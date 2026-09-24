@@ -58,62 +58,63 @@ export default function InsurerDashboard() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold">Insurer Dashboard</h1>
-        <p className="text-gray-500 mt-1">Review and cryptographically verify claims without seeing private data.</p>
+      <div className="relative">
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-amber-500/10 blur-[100px] rounded-full -z-10"></div>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-100">Insurer Dashboard</h1>
+        <p className="text-slate-400 mt-2 text-lg font-light">Review and cryptographically verify claims without seeing private data.</p>
       </div>
 
       {/* Metrics */}
-      <div className="grid md:grid-cols-4 gap-4">
-        <Card className="flex items-center gap-4 py-4">
-          <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg"><FileCheck size={24} className="text-gray-600 dark:text-gray-400"/></div>
-          <div><p className="text-sm font-medium text-gray-500">Total Claims</p><p className="text-2xl font-bold">{totalClaims}</p></div>
+      <div className="grid md:grid-cols-4 gap-6">
+        <Card className="flex items-center gap-5 py-6 hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all border border-slate-800 hover:border-blue-500/30">
+          <div className="p-4 bg-blue-500/10 rounded-xl border border-blue-500/20"><FileCheck size={28} className="text-blue-400"/></div>
+          <div><p className="text-sm font-semibold tracking-wide text-slate-400 uppercase">Total Claims</p><p className="text-3xl font-bold text-slate-100">{totalClaims}</p></div>
         </Card>
-        <Card className="flex items-center gap-4 py-4">
-          <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-lg"><ShieldCheck size={24} className="text-green-600 dark:text-green-400"/></div>
-          <div><p className="text-sm font-medium text-gray-500">ZK Verified</p><p className="text-2xl font-bold">{verifiedClaims}</p></div>
+        <Card className="flex items-center gap-5 py-6 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] transition-all border border-slate-800 hover:border-emerald-500/30">
+          <div className="p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/20"><ShieldCheck size={28} className="text-emerald-400"/></div>
+          <div><p className="text-sm font-semibold tracking-wide text-slate-400 uppercase">ZK Verified</p><p className="text-3xl font-bold text-slate-100">{verifiedClaims}</p></div>
         </Card>
-        <Card className="flex items-center gap-4 py-4">
-          <div className="p-3 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg"><Clock size={24} className="text-yellow-600 dark:text-yellow-400"/></div>
-          <div><p className="text-sm font-medium text-gray-500">Pending</p><p className="text-2xl font-bold">{pendingClaims}</p></div>
+        <Card className="flex items-center gap-5 py-6 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all border border-slate-800 hover:border-amber-500/30">
+          <div className="p-4 bg-amber-500/10 rounded-xl border border-amber-500/20"><Clock size={28} className="text-amber-400"/></div>
+          <div><p className="text-sm font-semibold tracking-wide text-slate-400 uppercase">Pending</p><p className="text-3xl font-bold text-slate-100">{pendingClaims}</p></div>
         </Card>
-        <Card className="flex items-center gap-4 py-4">
-          <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-lg"><XCircle size={24} className="text-red-600 dark:text-red-400"/></div>
-          <div><p className="text-sm font-medium text-gray-500">Rejected</p><p className="text-2xl font-bold">{rejectedClaims}</p></div>
+        <Card className="flex items-center gap-5 py-6 hover:shadow-[0_0_30px_rgba(239,68,68,0.1)] transition-all border border-slate-800 hover:border-red-500/30">
+          <div className="p-4 bg-red-500/10 rounded-xl border border-red-500/20"><XCircle size={28} className="text-red-400"/></div>
+          <div><p className="text-sm font-semibold tracking-wide text-slate-400 uppercase">Rejected</p><p className="text-3xl font-bold text-slate-100">{rejectedClaims}</p></div>
         </Card>
       </div>
 
       {/* Claims Table */}
-      <Card className="p-0 overflow-hidden">
-        <div className="p-6 border-b border-border bg-gray-50 dark:bg-gray-800/30">
-          <h2 className="text-xl font-bold">Recent Claims</h2>
+      <Card className="p-0 overflow-hidden border border-slate-800">
+        <div className="p-6 border-b border-slate-800 bg-slate-900/50">
+          <h2 className="text-2xl font-bold text-slate-100">Recent Claims</h2>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
-            <thead className="bg-gray-50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-400 border-b border-border">
+            <thead className="bg-slate-900/80 text-slate-400 border-b border-slate-800 uppercase tracking-wider text-xs">
               <tr>
-                <th className="p-4 font-semibold">Claim ID</th>
-                <th className="p-4 font-semibold">Policy</th>
-                <th className="p-4 font-semibold">AI Classification</th>
-                <th className="p-4 font-semibold">Timestamp</th>
-                <th className="p-4 font-semibold">Status</th>
-                <th className="p-4 font-semibold text-right">Action</th>
+                <th className="p-5 font-semibold">Claim ID</th>
+                <th className="p-5 font-semibold">Policy</th>
+                <th className="p-5 font-semibold">AI Classification</th>
+                <th className="p-5 font-semibold">Timestamp</th>
+                <th className="p-5 font-semibold">Status</th>
+                <th className="p-5 font-semibold text-right">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-border">
+            <tbody className="divide-y divide-slate-800/60">
               {claims.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="p-8 text-center text-gray-500">No claims found.</td>
+                  <td colSpan={6} className="p-12 text-center text-slate-500 text-lg">No claims found.</td>
                 </tr>
               ) : claims.map(claim => (
-                <tr key={claim.id} className="hover:bg-gray-50/50 dark:hover:bg-gray-800/20">
-                  <td className="p-4 font-mono font-medium">{claim.id}</td>
-                  <td className="p-4 font-medium">{claim.policy?.name || claim.policyId}</td>
-                  <td className="p-4">
+                <tr key={claim.id} className="hover:bg-slate-800/40 transition-colors group">
+                  <td className="p-5 font-mono text-amber-400/90 font-medium">{claim.id}</td>
+                  <td className="p-5 font-medium text-slate-200">{claim.policy?.name || claim.policyId}</td>
+                  <td className="p-5">
                     <Badge variant="default">{claim.category}</Badge>
-                    {claim.aiConfidence && <span className="ml-2 text-xs text-gray-500">{(claim.aiConfidence * 100).toFixed(0)}% conf</span>}
+                    {claim.aiConfidence && <span className="ml-2 text-xs text-slate-500">{(claim.aiConfidence * 100).toFixed(0)}% conf</span>}
                   </td>
-                  <td className="p-4 text-gray-500">{new Date(claim.createdAt).toLocaleString()}</td>
+                  <td className="p-5 text-slate-400">{new Date(claim.createdAt).toLocaleString()}</td>
                   <td className="p-4">
                     <div className="flex items-center font-medium">
                       <StatusIcon status={claim.status} />
