@@ -18,7 +18,7 @@ PrivacyGuard Insurance is a privacy-first web3 insurance claim verification syst
 - [x] **Documentation**: This README contains full setup and usage instructions.
 - [x] **CI/CD Pipeline**: GitHub Actions configured for automated builds and testing.
 - [x] **15 Meaningful Commits**: Clear, professional commit history.
-- [x] **Live Preprod Demo**: [https://midnight-level4-frontend.vercel.app](https://midnight-level4-frontend.vercel.app)
+- [x] **Live Preview Demo**: [https://midnight-level4-frontend.vercel.app](https://midnight-level4-frontend.vercel.app)
 - [x] **Midnight Contract Address**: 'c006cf208c80169aaa39ea787e1413a5451aeb4f1d121d65ba9e1b6f6a8c2a79' (Preview)
 - [x] **Product X (Twitter) Profile**: [https://x.com/privacyguard_](https://x.com/privacyguard_)
 - [x] **Demo Video**: [https://www.loom.com/share/1915d97c336a466a9d186d6764dad876](https://www.loom.com/share/1915d97c336a466a9d186d6764dad876)
